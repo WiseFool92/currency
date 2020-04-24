@@ -46,14 +46,15 @@ git clone {link to repository}
 |                          Behavior                          | Input  | Output  |
 | :--------------------------------------------------------: | :----: | :-----: |
 | The user enters an amount of USD | '$1 USD' | '$1 USD'  |
+| The program uses a drop down menu for currency chocies | 'select from dropdown' | 'Convert it' |
 | The user selects a currency to exchange it with  | 'Euro' | '.93 Euro' |
 | The user has multiple currency options | 'Euro', 'Swiss Franc', 'Pound Sterling', 'Russian Ruble', 'Danish Krone' | '.93', '.98', '.81', '74.69', '6.91' |
-| The program will notify the user with any error mesages | '$5 USD to Swiss Franc' | '404 server not found' |
-| The program will notify the user when a curerncy is unavaliable | '$5 USD to Uruguayan Peso' | 'Apologies this currency is unavaliable' |
-| The program is able to convert between all avaliable currencies | 'Anything on the list' | 'Converts it' |
-| The program can convert from currencies other than USD | 'Anything other than USD' | 'Converts it' |
+| The program will notify the user with any error mesages | '$5 USD to Swiss Franc' | 'API Error: Check URL' , 'API Error: Check Key' |
+| The program will notify the user when a conversion isnt supported | '$5 USD to Uruguayan Peso' | 'Conversion Error: Check if Conversion is Supported' |
+| The program is able to convert between all avaliable currencies | 'Anything on the API list' | 'Converts it from USD' |
+| The program can convert from currencies other than USD | 'Selects from dropdown' | 'Converts it' |
 | The program uses session storage and only makes one API call per user session | 'One API Call' | 'Access to all conversion functionality' |
-| The program uses a drop down menu for currency chocies | 'select from dropdown' | 'Convert it' |
+
 
 
 
