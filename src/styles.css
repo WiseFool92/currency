@@ -8,4 +8,28 @@ body {
   min-height: 100%;
   background-attachment: fixed;
   margin: 0;
+  text-align: center;
+}
+.showOutput {
+  padding: .5%;
+  margin: .5%;
+}
+#btnLocation {
+  background-color: black;
+  color:rgb(91, 57, 245);
+  margin: .5%;
+}
+#type {
+  background-color: black;
+  color: blueviolet;
+  margin: .5%;
+  text-align: center;
+}
+#currencyType {
+  padding: .5%;
+  margin: .5%;
+}
+#converter {
+  padding: .5%;
+  margin: .5%;
 }
