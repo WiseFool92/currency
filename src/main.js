@@ -5,15 +5,16 @@ import './styles.css';
 
 $(document).ready(function() {
   $('#btnLocation').click(function() {
+    event.preventDefault();
 
     (async () => {
-      let usd = new Currency();
-      const response = await usd.getCurrency();
-      getElements(response);
+      let change = new Currency();
+      const response = await change.getCurrency();
+      currencyChange(response);
     })();
 
-    function getElements(response) {
-      console.log(response)
+    function currencyChange(response) {
+      // console.log(response)
       if (response) { 
         $('.showOutput').html(`${response.AED}`);
       } else {
