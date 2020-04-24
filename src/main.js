@@ -1,6 +1,6 @@
-import { Currency } from './currency';
 import $ from 'jquery';
 import './styles.css';
+import { Currency } from './currency';
 
 
 $(document).ready(function() {
@@ -15,10 +15,10 @@ $(document).ready(function() {
 
     function currencyChange(response) {
       // console.log(response)
-      if (response) { 
-        $('.showOutput').html(`${response.AED}`);
-      } else {
-        $('.showOutput').html(`Apologies there was an error trying to display your exchange.`);
+      if (response.result === undefined) { 
+        $('.showOutput').html(`<p>API ERROR: Check URL</p>${response}`);
+      } else if (response.result === "error") {
+        $('.showOutput').html(`<p>API ERROR: Check Key</p>${response}`);
       }
     }
   });
